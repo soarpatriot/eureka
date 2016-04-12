@@ -1,0 +1,17 @@
+.settings/
+/out/
+/.gradle/
+/.idea/
+/shared/
+/build/
+/bower_components/
+/node_modules/
+*.iml
+*.ipr
+*.iws
+/bin/
+.project
+.classpath
+classes/
+logs/
+*.log
