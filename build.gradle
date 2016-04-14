@@ -62,7 +62,10 @@ sonarqube {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter')
     compile('org.springframework.boot:spring-boot-starter-web')
-
+    compile 'com.netflix.hystrix:hystrix-core:1.5.2'
+    compile 'com.netflix.hystrix:hystrix-dashboard:1.5.2'
+    compile('org.springframework.cloud:spring-cloud-starter-hystrix')
+    compile('org.springframework.cloud:spring-cloud-netflix-hystrix-dashboard:1.0.7.RELEASE')
     compile('org.springframework.boot:spring-boot-starter-jetty')
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
