@@ -27,10 +27,7 @@ spring:
   client:
     registerWithEureka: true
     fetchRegistry: true
-    useDnsForFetchingServiceUrls: false
-
     serviceUrl:
-
       defaultZone: http://10.3.45.151:8761,http://10.3.47.62:8761
 ---
 spring:
@@ -41,6 +38,5 @@ eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
-    useDnsForFetchingServiceUrls: false
     serviceUrl:
       defaultZone: http://10.3.45.151:8761,http://10.3.47.62:8761
