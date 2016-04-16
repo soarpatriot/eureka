@@ -23,7 +23,7 @@ logging:
 spring:
   profiles: eureka-peer1
   instance:
-    hostname: eureka-peer1
+    hostname: 10.3.45.151
   client:
     registerWithEureka: true
     fetchRegistry: true
@@ -37,7 +37,7 @@ spring:
   profiles: eureka-peer2
 eureka:
   instance:
-    hostname: eureka-peer2
+    hostname: 10.3.47.62
   client:
     registerWithEureka: true
     fetchRegistry: true
