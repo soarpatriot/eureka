@@ -4,13 +4,13 @@ require 'capistrano-daemonize'
 lock '3.3.5'
 
 
-set :application, 'price-service'
-set :repo_url, 'git@git.rfdoa.cn:java/price-service.git'
+set :application, 'eureka'
+set :repo_url, 'https://github.com/soarpatriot/eureka.git'
 
 set :scm, :git
 
 set :version, "0.1.1"
-set :jar_file, "price-service-#{fetch(:version)}.jar"
+set :jar_file, "eureka-#{fetch(:version)}.jar"
 
 
 # Default value for :format is :pretty
