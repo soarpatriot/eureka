@@ -20,18 +20,18 @@ logging:
 
 ---
 spring:
-  profiles: peer1
+  profiles: eureka-peer1
   instance:
-    hostname: peer1
+    hostname: eureka-peer1
   client:
     serviceUrl:
-      defaultZone: http://peer2/eureka/
+      defaultZone: http://10.3.47.62:8761
 ---
 spring:
-  profiles: peer2
+  profiles: eureka-peer2
 eureka:
   instance:
-    hostname: peer2
+    hostname: eureka-peer2
   client:
     serviceUrl:
-      defaultZone: http://peer1/eureka/
+      defaultZone: http://10.3.45.151:8761
