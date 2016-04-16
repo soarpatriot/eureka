@@ -13,7 +13,7 @@ eureka:
     fetchRegistry: false
     server:
       enableSelfPreservation: false
-#      waitTimeInMsWhenSyncEmpty: 0
+      waitTimeInMsWhenSyncEmpty: 0
 logging:
     level:
         org.springframework: 'OFF'
@@ -25,8 +25,13 @@ spring:
   instance:
     hostname: eureka-peer1
   client:
+    registerWithEureka: true
+    fetchRegistry: true
+    useDnsForFetchingServiceUrls: false
+
     serviceUrl:
-      defaultZone: http://10.3.47.62:8761
+
+      defaultZone: http://10.3.45.151:8761,http://10.3.47.62:8761
 ---
 spring:
   profiles: eureka-peer2
@@ -34,5 +39,8 @@ eureka:
   instance:
     hostname: eureka-peer2
   client:
+    registerWithEureka: true
+    fetchRegistry: true
+    useDnsForFetchingServiceUrls: false
     serviceUrl:
-      defaultZone: http://10.3.45.151:8761
+      defaultZone: http://10.3.45.151:8761,http://10.3.47.62:8761
