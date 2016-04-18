@@ -22,21 +22,39 @@ logging:
 ---
 spring:
   profiles: eureka-peer1
+server:
+  port: ${PORT:8762}
+eureka:
   instance:
-    hostname: 10.3.45.151
+    hostname: peer1
+    leaseRenewalIntervalInSeconds: 3
   client:
-    registerWithEureka: true
-    fetchRegistry: true
+    prefer-same-zone-eureka: true
+    use-dns-for-fetching-service-urls: false
+    region: shawn
+    availability-zones:
+      shawn: 'peer1,peer2'
     serviceUrl:
-      defaultZone: http://10.3.47.62:8761
+      'peer1': 'http://peer1:8762/'
+      'peer2': 'http://peer2:8761/'
 ---
 spring:
   profiles: eureka-peer2
+server:
+  port: ${PORT:8761}
 eureka:
   instance:
-    hostname: 10.3.47.62
+    hostname: peer2
+    leaseRenewalIntervalInSeconds: 3
+
   client:
-    registerWithEureka: true
-    fetchRegistry: true
+
+    prefer-same-zone-eureka: true
+    use-dns-for-fetching-service-urls: false
+    region: shawn
+    availability-zones:
+      shawn: 'peer1,peer2'
     serviceUrl:
-      defaultZone: http://10.3.45.151:8761
+      'peer1': 'http://peer1:8762/'
+      'peer2': 'http://peer2:8761/'
+
