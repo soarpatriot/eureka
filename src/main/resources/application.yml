@@ -5,6 +5,11 @@ spring:
 server:
   port: ${PORT:8761}
 
+turbine:
+  aggregator:
+    clusterConfig: EUREKA
+  appConfig: eureka
+
 
 eureka:
   instance:
@@ -12,6 +17,9 @@ eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
+    eurekaServerURLContext: eureka
+    healthcheck:
+      enabled: true
     serviceUrl:
       defaultZone: http://peer1:8761/eureka/
 logging:
@@ -30,6 +38,7 @@ eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
+    eurekaServerURLContext: eureka
     serviceUrl:
       defaultZone: http://peer2:8761/eureka/
 ---
@@ -44,5 +53,8 @@ eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
+    eurekaServerURLContext: eureka
+    healthcheck:
+      enabled: true
     serviceUrl:
       defaultZone: http://peer1:8762/eureka/
