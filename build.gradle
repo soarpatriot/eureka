@@ -74,7 +74,7 @@ dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-hystrix')
     compile('org.springframework.cloud:spring-cloud-starter-turbine')
 
-    //compile('org.springframework.cloud:spring-cloud-netflix-hystrix-dashboard:1.0.7.RELEASE')
+    compile('org.springframework.cloud:spring-cloud-netflix-hystrix-dashboard:1.0.7.RELEASE')
     compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
 
     testCompile("org.springframework.boot:spring-boot-starter-test")
