@@ -41,9 +41,9 @@ eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
-    eurekaServerURLContext: eureka
+    eurekaServerURLContext: "/"
     serviceUrl:
-      defaultZone: http://10.3.47.62:8761/eureka/
+      defaultZone: http://peer2:8761/
 
 ---
 spring:
@@ -57,7 +57,8 @@ eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
+    eurekaServerURLContext: "/"
     healthcheck:
       enabled: true
     serviceUrl:
-      defaultZone: http://10.3.45.151:8761/eureka/
+      defaultZone: http://peer1:8761/
