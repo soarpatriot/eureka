@@ -73,6 +73,7 @@ dependencies {
 
     //compile('com.netflix.hystrix:hystrix-core:1.5.2')
     //compile('com.netflix.hystrix:hystrix-dashboard:1.5.2')
+    compile('org.springframework.cloud:spring-cloud-starter-zuul')
     compile('org.springframework.cloud:spring-cloud-starter-turbine')
     compile('org.springframework.cloud:spring-cloud-starter-hystrix')
     compile('org.springframework.cloud:spring-cloud-starter-turbine')

@@ -30,6 +30,13 @@ logging:
         com.xiaojiuwo.models.mapper: 'DEBUG'
 
 
+zuul:
+  ignoredPatterns: /eureka/**
+  routes:
+    price:
+      path: /price/**
+      stripPrefix: true
+
 ---
 spring:
   profiles: eureka-peer1
@@ -41,7 +48,7 @@ eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
-    
+
     serviceUrl:
       defaultZone: http://10.3.47.62:8761/eureka/
 
