@@ -6,8 +6,8 @@ server:
   port: ${PORT:8761}
 
 turbine:
-  aggregator:
-    appConfig: eureka,open
+  #aggregator:
+  appConfig: eureka,open
   clusterNameExpression: 'default'
 
 
