@@ -26,6 +26,3 @@ PLATFORMS
 DEPENDENCIES
   capistrano (= 3.3.5)
   capistrano-daemonize
-
-BUNDLED WITH
-   1.10.6

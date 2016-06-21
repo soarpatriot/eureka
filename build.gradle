@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '1.3.3.RELEASE'
+        springBootVersion = '1.3.5.RELEASE'
     }
     repositories {
 
@@ -29,7 +29,7 @@ version = "2.0"
 
 dependencyManagement {
     imports {
-        mavenBom 'org.springframework.cloud:spring-cloud-netflix:1.1.0.RC2'
+        mavenBom 'org.springframework.cloud:spring-cloud-netflix:1.1.2.RELEASE'
     }
 }
 
