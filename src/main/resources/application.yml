@@ -7,8 +7,8 @@ server:
 
 turbine:
   aggregator:
-    clusterConfig: EUREKA
-  appConfig: eureka
+    appConfig: eureka,open
+  clusterNameExpression: 'default'
 
 
 
