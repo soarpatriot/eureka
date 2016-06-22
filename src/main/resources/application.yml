@@ -2,6 +2,18 @@ spring:
 
   pidfile: shared/tmp/pids/application.pid
 
+  application:
+    name: micro
+  boot:
+    admin:
+      context-path: /admin
+    
+  jackson:
+    serialization:
+      indent_output: true
+endpoints:
+    health:
+      sensitive: false
 server:
   port: ${PORT:8761}
 
