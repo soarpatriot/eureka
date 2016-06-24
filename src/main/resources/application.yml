@@ -1,10 +1,12 @@
 spring:
 
   pidfile: shared/tmp/pids/application.pid
+  application:
+    name: micro
 
-  boot:
-    admin:
-      context-path: /admin
+  #boot:
+  #  admin:
+  #    context-path: /admin
 
   jackson:
     serialization:
@@ -43,12 +45,10 @@ logging:
 zuul:
   ignoredPatterns: /eureka/**
   routes:
-    price:
-      path: /price/**
-      stripPrefix: true
     open:
       path: /open/**
-      stripPrefix: true
+
+
 
 ---
 spring:
