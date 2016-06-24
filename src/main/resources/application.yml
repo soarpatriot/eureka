@@ -17,7 +17,7 @@ server:
 
 turbine:
   #aggregator:
-  appConfig: eureka,open
+  appConfig: micro,open
   clusterNameExpression: 'default'
 
 
