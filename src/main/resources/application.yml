@@ -46,6 +46,9 @@ zuul:
     price:
       path: /price/**
       stripPrefix: true
+    open:
+      path: /open/**
+      stripPrefix: true
 
 ---
 spring:
