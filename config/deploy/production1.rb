@@ -1,12 +1,12 @@
 set :stage, :production
 
-set :profile, "production"
+set :profile, "micro-peer1"
 
-set :deploy_to, "/data/www/price-services"
+set :deploy_to, "/JavaWeb/micro.wuliusys.com"
 
 set :jar_pid, "#{shared_path}/tmp/pids/application.pid"
 
-set :server_name, "10.230.3.181"
+set :server_name, "10.230.3.141"
 
 set :branch, "master"
 
@@ -15,3 +15,4 @@ set :default_env, {
 }
 
 server fetch(:server_name), user: 'deploy', roles: %w{web app}
+
