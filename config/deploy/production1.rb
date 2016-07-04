@@ -6,7 +6,7 @@ set :deploy_to, "/JavaWeb/micro.wuliusys.com"
 
 set :jar_pid, "#{shared_path}/tmp/pids/application.pid"
 
-set :server_name, "10.230.3.141"
+set :server_name, "10.230.3.140"
 
 set :branch, "master"
 

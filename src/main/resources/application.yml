@@ -101,7 +101,7 @@ eureka:
 
 ---
 spring:
-  profiles: eureka-peer2
+  profiles: micro-peer2
 server:
   port: ${PORT:8267}
 eureka:
