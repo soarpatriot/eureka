@@ -6,7 +6,7 @@ set :deploy_to, "/JavaWeb/eureka.wltest.com"
 
 set :jar_pid, "#{shared_path}/tmp/pids/application.pid"
 
-set :server_name, "10.3.45.151"
+set :server_name, "10.3.54.69"
 
 set :branch, "master"
 

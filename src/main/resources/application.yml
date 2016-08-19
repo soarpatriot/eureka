@@ -54,7 +54,7 @@ zuul:
 spring:
   profiles: eureka-peer1
 server:
-  port: ${PORT:8761}
+  port: ${PORT:8835}
 eureka:
   instance:
     hostname: 10.3.45.151
