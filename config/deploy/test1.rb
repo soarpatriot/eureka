@@ -2,7 +2,7 @@ set :stage, :test
 
 set :profile, "eureka-peer1"
 
-set :deploy_to, "/JavaWeb/eureka.wltest.com"
+set :deploy_to, "/JavaWeb/micro.wltest.com"
 
 set :jar_pid, "#{shared_path}/tmp/pids/application.pid"
 

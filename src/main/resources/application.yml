@@ -80,7 +80,7 @@ eureka:
     healthcheck:
       enabled: true
     serviceUrl:
-      defaultZone: http://10.3.45.151:8761/eureka/
+      defaultZone: http://10.3.54.69:8835/eureka/
 
 
 
