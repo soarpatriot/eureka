@@ -1,0 +1,108 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.9.RELEASE'
+    }
+    repositories {
+
+        maven { url "http://repository.rfddc.com/nexus/content/groups/public/" }
+        mavenCentral()
+
+
+        maven { url 'https://plugins.gradle.org/m2/'}
+
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        //classpath('io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE')
+        //clssspath(id "io.spring.dependency-management" version "1.0.3.RELEASE")
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.3.RELEASE"
+
+    }
+
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+
+group = "com.xiaojiuwo"
+version = "2.0"
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-netflix:1.4.0.RELEASE'
+
+    }
+}
+
+
+jar {
+    baseName = 'eureka'
+    version = '0.1.1'
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+
+    maven { url "http://repository.rfddc.com/nexus/content/groups/public/" }
+    mavenCentral()
+    maven {
+        url 'https://repo.spring.io/libs-milestone'
+    }
+
+    maven { url 'https://plugins.gradle.org/m2/'}
+    flatDir {
+        dirs 'lib'
+    }
+
+}
+
+configurations {
+    providedRuntime
+    driver
+}
+
+
+
+
+dependencies {
+
+    //compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    //compile("org.springframework.boot:spring-boot-starter-jetty")
+    //compile("org.springframework.boot:spring-boot-starter-actuator")
+    //compile('org.springframework.boot:spring-boot-starter-jdbc')
+
+    //compile('org.apache.commons:commons-lang3:3.3.2')
+    //compile('com.google.guava:guava:17.0')
+
+    //compile('com.netflix.hystrix:hystrix-core:1.5.2')
+    //compile('com.netflix.hystrix:hystrix-dashboard:1.5.2')
+    //compile('org.springframework.cloud:spring-cloud-starter-zuul')
+    //compile('org.springframework.cloud:spring-cloud-starter-turbine')
+    //compile('org.springframework.cloud:spring-cloud-starter-hystrix')
+    //compile('org.springframework.cloud:spring-cloud-starter-turbine')
+
+    //compile('org.springframework.cloud:spring-cloud-netflix-hystrix-dashboard')
+    compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
+
+    //compile('de.codecentric:spring-boot-admin-server:1.3.3')
+    //compile('de.codecentric:spring-boot-admin-server-ui:1.3.3')
+
+    //testCompile("org.springframework.boot:spring-boot-starter-test")
+    //testCompile("junit:junit")
+
+}
+
+
+eclipse {
+
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.4'
+}

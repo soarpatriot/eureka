@@ -1,0 +1,37 @@
+spring:
+
+  application:
+    name: micro
+
+  #boot:
+  #  admin:
+  #    context-path: /admin
+
+  jackson:
+    serialization:
+      indent_output: true
+endpoints:
+    health:
+      sensitive: false
+server:
+  port: ${PORT:8761}
+
+
+
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+    healthcheck:
+      enabled: true
+
+logging:
+    level:
+        org.springframework: 'OFF'
+        com.xiaojiuwo.models.mapper: 'DEBUG'
+
+
