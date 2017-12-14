@@ -17,14 +17,19 @@ server:
   port: ${PORT:8761}
 
 
+zuul:
+  routes:
+    client:
+      path: /client/**
+      serviceId: client
 
 
 eureka:
   instance:
     hostname: localhost
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+    registerWithEureka: true
+    fetchRegistry: true
 
     healthcheck:
       enabled: true
